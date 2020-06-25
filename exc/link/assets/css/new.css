@@ -1,0 +1,33 @@
+.tab-x{
+  background-color: #edf5f3;
+  border-radius: 13px;
+  min-height: 450px;
+}
+
+.div-tab-x{
+	padding: 11px;padding-top: 20px;
+}
+.font-logo2{
+  font-family: "Philosopher", sans-serif;
+  font-size: 26px;
+  /*display: block;*/
+  margin-top: -2px;
+  color: #71c55d;
+}
+.font-logo{
+  font-family: "Philosopher", sans-serif;
+  font-size: 26px;
+  /*display: block;*/
+  margin-top: -2px;
+}
+.mtp{
+  margin-top: -3px;
+}
+@media (max-width: 691px) {
+  .tab-x{
+    background-color: #fff;
+    border-radius: 0px;
+    padding-top: 10px;
+    min-height: 0px;
+  }
+}

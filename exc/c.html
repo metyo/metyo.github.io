@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+
+</head>
+<body onload="myFunction()" style="margin:0;">
+   <div >
+   <div class="row" id="loader"></div>
+
+   <div style="display:none;" id="myDiv" class="animate-bottom row">
+      <div class="col-md-12">
+         <center>
+           <h2 class="text1">
+            <b>  Website & Bisnis Anda<br>
+            </b>
+         </h2><br>
+         <img src="img/2excKODE2.jpg" width="500" height="500" align="center" class="img-responsive">
+         <br>
+      </center>
+
+      <font style="text-align:justify" class="text3">Website disebut juga site, web, situs, merupakan halaman informasi yang berisi tulisan, gambar, animasi yang disusun secara terstruktur. Segala informasi yang disediakan melalui jaringan internet, dengan menggunakan jaringan internet maka website dapat di akses oleh seluruh pengguna internet di seluruh dunia. Maka informasi yang disampaikan akan lebih cepat tersampaikan meskipun pemilik informasi tidak harus menginfokan dengan manual.
+         <br><br>
+         Agar informasi yang disampaikan bisa maksimal dan dimengerti oleh pengguna internet, maka pembuat web juga memberikan beberapa keterangan dengan menyisipkan beberapa gambar sebagai pendukung dalam informasi.
+         <br><br>
+         Sebuah website merupakan sebuah representasi virtual tentang suatu bisnis, berita, dan usaha. Dengan kemajuan teknologi yang semakin modern, pengguna internet menginginkan segala informasi yang mereka inginkan tersedia dengan mudah, dan akurat, maka dengan adanya website, bisa membantu pelaku usaha, atau pelaku bisnis untuk menawarkan usaha, jasa, bisnis yang mereka jalankan. Maka dengan adanya website, usaha yang dimiliki akan lebih terihat modern daripada usaha yang belum memiliki website.
+         <br><br>
+         Ada beberapa jenis website yang dibedakan tergantung dari jenis dan fungsi dari website itu sendiri. Berikut beberapa jenis website.
+         <br><br>
+         <b>JENIS-JENIS WEBSITE :
+         </b><br><br>
+         <b>1.</b> Website Profile<br>
+         <b>2.</b> Website Toko Online<br>
+         <b>3.</b> Website Catalog<br>
+         <b>4.</b> Website Komunitas<br>
+         <b>5.</b> Website Pendidikan<br>
+         <b>6.</b> Website Berita<br>
+         <b>7.</b> Website Personal (branding)<br>
+         <b>8.</b> Website Bisnis, dll<br>
+         <br><br>
+         Masih ada banyak jenis website selain yang sudah disebutkan diatas, akan tetapi beberapa jenis website yang sudah tercantum diatas sudah mewakili berabagi jenis website yang sudah bertebaran banyak di internet. Jenis website ini tergantung untuk apa dibangun. Untuk menawarka jasa, barang ada website tentang berita – terkini yang terjadi dilingkungan masyarakat yang masih hangat dan pantas untuk dimuat di internet. Atau juga website hiburan dan kebutuhan lainnya seperti game, lagu, video dan sebagainya. Berikut ini beberapa manfaat dari website.
+         <br><br>
+         <b>MANFAAT WEBSITE :
+         </b><br><br>
+         </font>
+         <table class="table table-striped">
+            <font style="text-align:justify" class="text3">
+            <tr><td><b>1.</b></td><td>Dengan memiliki website untuk usaha, berarti usaha sudah berada selangkah lebih maju dibandingkan competitor yang belum memiliki website.<br></td> </tr>
+            <tr><td><b>2.</b></td><td>Meningkatkan brand/prestise perusahaan mata pelanggan dan calon pelanggan.<br></td> </tr>
+            <tr><td><b>3.</b></td><td>Melalui website dapat memberikan informasi secara update kepada pelanggan. Baik berupa informasi produk atau dukungan terhadap produk yang telah dibeli.<br></td> </tr>
+            <tr><td><b>4.</b></td><td>Website menampung produk dan informasi sebanyak-banyaknya. (Media advertising terbatas).<br></td> </tr>
+            <tr><td><b>5.</b></td><td>Media Advertising (koran, tabloid, brosur) hanya pancingan saja. Pembaca akan mencari informasi lebih banyak melalui website Anda.<br></td> </tr>
+            <tr><td><b>6.</b></td><td>Produk dan informasi akan terpublikasi ke seluruh dunia.(Media advertising hanya terbatas lokal saja).<br></td> </tr>
+            <tr><td><b>7.</b></td><td>Sebagai tempat penjualan (Showroom) 24 jam selain toko nyata.<br></td> </tr>
+            <tr><td><b>8.</b></td><td>Website adalah investasi super murah. Bandingkan dengan toko nyata yang harus sewa ruko, bayar listrik, bayar karyawan, telpon, dll.<br></td> </tr>
+            <tr><td><b>9.</b></td><td>Memudahkan pelanggan menghubungi, dan mendapatkan informasi produk dan jasa.<br></td> </tr>
+            <tr><td><b>10.</b></td><td>Mendapatkan Pelanggan Baru setelah melihat informasi yang menarik  ada diwebsite.<br></td> </tr>
+            <tr><td><b>11.</b></td><td>Salah satu kunci utama suksesnya sebuah website adalah website yang mampu menarik sebanyak mungkin pengunjung sebagai pelanggan. <b></td> </tr></font>
+            </table>
+            <br><br>
+
+
+
+         </div>
+      </div>
+
+ </div>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</body>
+
+</html>
