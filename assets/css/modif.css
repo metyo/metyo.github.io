@@ -1,0 +1,39 @@
+#back-top {
+ position: fixed;
+ z-index: 1000;
+ bottom: 3px;
+ right: 5px;
+}
+@media screen and (max-width: 480px) {
+  #back-top {
+   position: fixed;
+   z-index: 1000;
+   bottom: 3px;
+   right: 5px;
+ }
+}
+#back-top a {
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  font: 11px/100% Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #323639;
+  /* background color transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover {
+ background: #EC0000;
+}
+/* arrow icon (span tag) */
+#back-top i {
+ margin-top: 10px;
+ font-size: 18px;
+}
+
+

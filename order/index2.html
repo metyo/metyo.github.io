@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+<title>Order Pijat</title>
+<!-- Favicon-->
+  <link rel="SHORTCUT ICON" href="../exc/this/img/1.jpg">
+
+<!-- description -->
+<meta name="description" content="Order Pijat, Silahkan Isi Data Pemesanan">
+<!-- Keywords -->
+<meta name="keywords" content="">
+
+<!-- Google Fosnts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
+
+<!-- Bootstrap Core Css -->
+<link href="../accounts/plugins/bootstrap/css/bootstrap.css?v=1.6.1" rel="stylesheet" />
+<!-- Waves Effect Css -->
+<link href="../accounts/plugins/node-waves/waves.css?v=1.6.1" rel="stylesheet" />
+<!-- Custom Css -->
+<link href="../accounts/css/style-login.css?v=1.6.1" rel="stylesheet" />
+<!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+<link href="../accounts/css/themes/all-themes.css?v=1.6.1" rel="stylesheet" />
+<link href="../accounts/css/modif-style.css?v=1.6.1" rel="stylesheet" />
+
+</head>
+
+<body class="theme-red" style="background-color: white;font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;">
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Loading System...</p>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <section class="form-login-page">
+        <div class="login-box" >
+          
+                <div class="card form-login-card">
+                    <div class="text-title-login" >
+                        <div class="text-logo-title-login">Order Pijat</div>
+                        <div>Silahkan Isi Data Pemesanan</div> 
+                    </div>
+                    <div class="input-text-login">
+                       <div class="form-group form-float">
+                            <div class="form-line form-line3"  id="class1">
+                                <input type="text" class="form-control" id="nama"  />
+                                <label class="form-label login-text-input" id="label-edit" >Nama Lengkap</label>
+                            </div>
+                        </div>
+                         <div class="form-group form-float">
+                            <div class="form-line form-line3"  id="class1">
+                                <input type="text" class="form-control" id="alamat"  />
+                                <label class="form-label login-text-input" id="label-edit" >Alamat Lengkap</label>
+                            </div>
+                        </div>
+                        <select id="jenis-kelamin" class="form-control form-line3" style="margin-bottom: 25px;">
+                            <option value="laki-laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                        <select id="treatment" class="form-control form-line3">
+                            <option value="Refleksi Body Massage 1,5 Jam">Refleksi & Body Massage 1,5 Jam</option>
+                            <option value="Refleksi Body Massage 2 Jam">Refleksi & Body Massage 2 Jam</option>
+                            <option value="Pijat Lulur 2 Jam">Pijat Lulur 2 Jam</option>
+                            <option value="Pijat Lulur 2,5 Jam">Pijat Lulur 2,5 Jam</option>
+                        </select>
+                    </div>
+                    
+                    <div class="link-div1-login">
+                        <div class="">
+                           <br />
+                        </div>
+                        <div class="div-parrent-brkt">
+                            <div><a href="../signup" class="link-body-content-home2 mm1"></a></div>
+                            <div class="div-btn-brkt">
+                                <a class="color-white-btn"> <button type="button" class="btn btn-lg btn-sign-log" id="ok" style="font-size: 18px;" onclick="myFunction()">Kirim</button> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+        </div>
+    </section>
+
+<!-- Jquery Core Js -->
+
+<script src="../accounts/plugins/jquery/jquery.min.js"></script>
+<!-- Waves Effect Plugin Js -->
+<script src="../accounts/plugins/node-waves/waves.js"></script>
+<!-- Custom Js -->
+<script src="../accounts/js/admin.js"></script>
+
+<script type="text/javascript">
+function myFunction() {
+    var nama = $('#nama').val();
+    var alamat = $('#alamat').val();
+    if(nama == ''){
+            alert('Please, isi nama anda !');
+            buttonNext.attr('style','color:white;font-size: 18px;');
+            return false;
+    }
+    if(alamat == ''){
+            alert('Please, isi alamat anda !');
+            buttonNext.attr('style','color:white;font-size: 18px;');
+            return false;
+        }
+
+    location.href = "https://api.whatsapp.com/send?phone=628995654009&text=Data%20Pemesanan%20Anda%20%0A%0ANama :%20"+$('#nama').val()+"%20%0AAlamat%20%3A%20"+$('#alamat').val()+"%20%0AJenis Kelamin%20%3A%20"+$('#jenis-kelamin').val()+"%20%0ATreatment%20%3A%20"+$('#treatment').val();
+}
+</script>
+
+</body>
+</html>
