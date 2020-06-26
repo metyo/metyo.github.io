@@ -118,3 +118,51 @@
 }
 
 
+.div-jasaAbout{
+    background-color: #e7f1f9;
+    border-radius: 10px;
+}
+
+.div-jasaContent{
+    padding-bottom: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 100px;
+}
+
+.pic-jasa{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 448px) {
+    .div-jasaContent{
+        padding-bottom: 60px;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 100px;
+    }
+}
+
+.div-jasaAboutText{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .div-jasaAboutText{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 15px;
+
+    }
+    .div-jasaAbout{
+        background-color: transparent;
+        border-radius: 10px;
+    }
+}
