@@ -1,5 +1,5 @@
 .nav-exc{
-	position: fixed;
+    position: fixed;
     width: 100%;
     background-color: #ffffff;
     z-index: 3;
@@ -7,15 +7,15 @@
 }
 
 .text-logo{
-	font-family: "Philosopher", sans-serif;
+    font-family: "Philosopher", sans-serif;
 }
 
 .text-logoGreen{
-	color: #71c55d;
+    color: #71c55d;
 }
 
 .content-exc{
-	padding-right: 20px;
+    padding-right: 20px;
     padding-left: 20px;
     padding-top: 100px;
 }
@@ -40,7 +40,7 @@
 
 
 .card-container2 {
-  height: 250px;
+  height: 220px;
   perspective: 600;
   position: relative;
   width: 100%;
@@ -50,7 +50,7 @@
 @media (max-width: 767px) {
 
   .card-container2 {
-    height: 330px;
+    height: 200px;
     perspective: 600;
     position: relative;
     width: 100%;
@@ -59,30 +59,19 @@
 
 }
 
-@media (max-width: 448px) {
-
-  .card-container2 {
-    height: 250px;
-    perspective: 600;
-    position: relative;
-    width: 100%;
-    display: inline-block;
-  }
-
-}
 
 .margin20-bottom{
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .card-padding{
-	padding-bottom: 40px;
+    padding-bottom: 40px;
 }
 
 @media (max-width: 448px) {
-	.card-padding{
-		padding-bottom: 40px;
-	}
+    .card-padding{
+        padding-bottom: 40px;
+    }
 }
 
 
