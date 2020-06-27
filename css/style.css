@@ -156,6 +156,20 @@
     font-size: 20px;
 }
 
+.img-bmManfaat{
+    width: 100%;
+}
+
+.card-bmManfaat{
+    border: 1px solid #9a9e9a;
+    border-radius: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+
 @media (max-width: 767px) {
     .div-jasaAboutText{
         padding-top: 20px;
@@ -171,7 +185,38 @@
     }
 
     .margin20-bottomJasa{
-        margin-bottom: 0px;
+        margin-bottom: s0px;
     }
 
+    .img-bmManfaat{
+        width: 200px;
+    }
+
+    .card-bmManfaat{
+        border: 1px solid #9a9e9a;
+        border-radius: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        margin-left: 5px;
+        width: 250px;
+        margin-bottom: 10px;
+    }
 }
+
+@media (max-width: 599px) {
+    .card-bmManfaat{
+        border: 1px solid #9a9e9a;
+        border-radius: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        margin-left: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
