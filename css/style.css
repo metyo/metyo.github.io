@@ -217,6 +217,16 @@
     }
 }
 
+.pad-rightHome{
+    padding-right: 0px;
+}
+
+@media (max-width: 448px) {
+    .pad-rightHome{
+        padding-right: 5px;
+    }
+}
+
 
 
 
