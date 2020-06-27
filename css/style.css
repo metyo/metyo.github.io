@@ -169,7 +169,32 @@
     margin-left: 5px;
 }
 
+.img-Manfaat{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.div-ManfaatPijat{
+    background-color: aqua;
+    margin-bottom: 46px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+
+@media (max-width: 842px) {
+    .img-Manfaat{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 @media (max-width: 767px) {
     .div-jasaAboutText{
         padding-top: 20px;
