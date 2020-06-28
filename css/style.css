@@ -186,6 +186,10 @@
     display: inline-block;
 }
 
+.div-ManfaatLink{
+    padding-bottom: 60px;
+}
+
 
 @media (max-width: 842px) {
     .img-Manfaat{
@@ -203,10 +207,6 @@
         padding-bottom: 5px;
         padding-top: 5px;
         display: inline-block;
-    }
-
-    .h3{
-        font-size: 16px;
     }
 }
 @media (max-width: 767px) {
@@ -254,6 +254,10 @@
         width: 100%;
         margin-bottom: 10px;
     }
+
+    .div-ManfaatLink{
+        padding-bottom: 30px;
+    }
 }
 
 .pad-rightHome{
@@ -265,6 +269,7 @@
         padding-right: 5px;
     }
 }
+
 
 
 
