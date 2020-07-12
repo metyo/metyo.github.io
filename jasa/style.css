@@ -1,3 +1,13 @@
+.new-top-link{
+    background: aquamarine;
+    width: fit-content;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: bolder;
+}
+
 .m-row{    
     margin-right: 20px;
     margin-left: 20px;
