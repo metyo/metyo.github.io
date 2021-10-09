@@ -1,14 +1,18 @@
-
+<?php
+error_reporting(0);
+$location = $_GET['location'];
+$pic = $_GET['pic'];
+?>
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-  <title>Jasa Pijat Purwokerto | Pijat Tangan</title>
+  <title>Jasa Pijat <?php echo $location; ?> | Pijat Tangan</title>
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
   <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-  <meta name="description" content="jasa pijat purwokerto, berikut adalah pemijatan punggung dan manfaatnya, informasi pijat panggilan purwokerto silahkan whatsapp 08995654009 ">
-  <meta name="keywords" content="pijat purwokerto, pijat panggilan purwokerto, massage purwokerto, terapi promil purwokerto, lulur purwokerto, kos purwokerto, kontrakan purwokerto, rumah purwokerto, hotel purwokerto, unsoed, iain, ump" />
+  <meta name="description" content="jasa pijat <?php echo $location; ?>, berikut adalah pemijatan punggung dan manfaatnya, informasi pijat panggilan <?php echo $location; ?> silahkan whatsapp 08995654009 ">
+  <meta name="keywords" content="pijat <?php echo $location; ?>, pijat panggilan <?php echo $location; ?>, massage <?php echo $location; ?>, terapi promil <?php echo $location; ?>, lulur <?php echo $location; ?>, kos <?php echo $location; ?>, kontrakan <?php echo $location; ?>, rumah <?php echo $location; ?>, hotel <?php echo $location; ?>, unsoed, iain, ump" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="rating" content="general">
   <meta name="robots" content="index, follow">
@@ -57,7 +61,7 @@
           <a class="nav-link" href="../../">EXC|Kode</a>
         </li>
       </ul>
-      <a class="form-inline my-2 my-lg-0" href="https://memohamad.github.io/order">
+      <a class="form-inline my-2 my-lg-0" href="https://wa.me/6282114813975">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-whatsapp fa-1x"> </i> Order Pijat</button>
       </a>
     </div>
