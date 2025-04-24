@@ -1,4 +1,4 @@
-    const correctPassword = "111117";
+   const correctPassword = "111117";
     const scriptURL = "https://script.google.com/macros/s/AKfycbxHM0K0M5alVbmoSWC2CqEzSLwiElR1URwDdOp0SNYSRlKqiAaqpE7gVHnkrO8dcRKr/exec";
 
     function checkPassword() {
@@ -19,6 +19,11 @@
         "Juli", "Agustus", "September", "Oktober", "November", "Desember"
       ];
       const date = new Date(dateString);
+      
+      // Menyesuaikan zona waktu (misal: GMT+7 untuk WIB)
+      const offset = 7 * 60; // WIB = GMT+7, jadi offsetnya 7 jam x 60 menit
+      date.setMinutes(date.getMinutes() + date.getTimezoneOffset() + offset);
+      
       const hari = date.getDate();
       const bulanNama = bulan[date.getMonth()];
       const tahun = date.getFullYear();
@@ -27,6 +32,11 @@
 
     function formatJam(dateString) {
       const date = new Date(dateString);
+      
+      // Menyesuaikan zona waktu (misal: GMT+7 untuk WIB)
+      const offset = 7 * 60; // WIB = GMT+7, jadi offsetnya 7 jam x 60 menit
+      date.setMinutes(date.getMinutes() + date.getTimezoneOffset() + offset);
+      
       return date.toTimeString().split(" ")[0];
     }
 
