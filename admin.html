@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Pemesanan Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .login-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1em;
+      margin: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #data-table {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container" id="login-container">
+    <h2>Login Admin</h2>
+    <input type="password" id="password" placeholder="Masukkan Password" />
+    <button onclick="checkPassword()">Login</button>
+  </div>
+
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Jenis Kelamin</th>
+        <th>Menu</th>
+        <th>No WhatsApp</th>
+        <th>Tanggal</th>
+        <th>Jam</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data akan muncul di sini -->
+    </tbody>
+  </table>
+
+  <script>
+    const correctPassword = "11november"; // Ganti dengan password yang diinginkan
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyP8cOQhUFrwZGTGrKsQfc0W8onL4JXhAY_23dLm9MD34DAFMV-5QfVDhOdPA_o-DDa/exec"; // Ganti dengan URL script kamu
+
+    function checkPassword() {
+      const enteredPassword = document.getElementById("password").value;
+
+      // Cek password
+      if (enteredPassword === correctPassword) {
+        // Password benar, sembunyikan form login
+        document.getElementById("login-container").style.display = "none";
+
+        // Tampilkan data
+        fetchData();
+      } else {
+        alert("Password salah, coba lagi.");
+      }
+    }
+
+    function fetchData() {
+      // Ambil data dari Google Sheets
+      fetch(scriptURL)
+        .then(response => response.json())
+        .then(data => {
+          const tableBody = document.querySelector('#data-table tbody');
+          if (Array.isArray(data) && data.length > 0) {
+            data.forEach((row, index) => {
+              const tr = document.createElement('tr');
+
+              if (Array.isArray(row)) {
+                row.forEach(cell => {
+                  const td = document.createElement('td');
+                  td.textContent = cell;
+                  tr.appendChild(td);
+                });
+              }
+
+              tableBody.appendChild(tr);
+            });
+
+            // Tampilkan tabel setelah data dimuat
+            document.getElementById('data-table').style.display = 'table';
+          } else {
+            console.log('Tidak ada data untuk ditampilkan');
+          }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    }
+  </script>
+
+</body>
+</html>
