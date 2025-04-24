@@ -49,14 +49,13 @@
             const tr = document.createElement('tr');
 
             // Asumsikan index: 0=nama, 1=jk, 2=menu, 3=wa, 4=waktu (timestamp)
-            const nama = row[0];
-            const jk = row[1];
-            const menu = row[2];
-            const wa = row[3];
-            const waktu = row[4];
-
-            const tanggal = formatTanggal(waktu);
-            const jam = formatJam(waktu);
+            const nama = row[1];
+            const jk = row[2];
+            const menu = row[3];
+            const wa = row[4];
+            const tanggal = row[5];
+            const waktu = row[6];
+           
 
             [nama, jk, menu, wa, tanggal, jam].forEach(cellValue => {
               const td = document.createElement('td');
