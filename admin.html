@@ -5,39 +5,58 @@
   <title>Data Pemesanan Admin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Reset default margin dan padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       margin: 0;
-      padding: 20px;
     }
 
     h2 {
       text-align: center;
       color: #333;
+      margin-bottom: 20px;
     }
 
     .login-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
       text-align: center;
-      margin-top: 50px;
     }
 
     input {
-      padding: 10px;
+      width: 100%;
+      padding: 12px;
       font-size: 1em;
-      margin: 10px;
+      margin-bottom: 15px;
       border-radius: 5px;
       border: 1px solid #ddd;
+      box-sizing: border-box;
     }
 
     button {
-      padding: 10px 20px;
+      width: 100%;
+      padding: 12px;
       background-color: #4CAF50;
       color: white;
       font-size: 1em;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
@@ -48,6 +67,9 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     th, td {
@@ -68,6 +90,29 @@
     #data-table {
       display: none;
     }
+
+    /* Animasi loading spinner */
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .loading-spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #4CAF50;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -76,6 +121,10 @@
     <h2>Login Admin</h2>
     <input type="password" id="password" placeholder="Masukkan Password" />
     <button onclick="checkPassword()">Login</button>
+  </div>
+
+  <div id="loading" class="loading" style="display: none;">
+    <div class="loading-spinner"></div>
   </div>
 
   <table id="data-table">
@@ -105,6 +154,7 @@
       if (enteredPassword === correctPassword) {
         // Password benar, sembunyikan form login
         document.getElementById("login-container").style.display = "none";
+        document.getElementById("loading").style.display = "flex";  // Tampilkan loading
 
         // Tampilkan data
         fetchData();
@@ -139,11 +189,16 @@
           } else {
             console.log('Tidak ada data untuk ditampilkan');
           }
+
+          // Sembunyikan loading spinner setelah data dimuat
+          document.getElementById("loading").style.display = "none";
         })
-        .catch(error => console.error('Error fetching data:', error));
+        .catch(error => {
+          console.error('Error fetching data:', error);
+          document.getElementById("loading").style.display = "none";  // Sembunyikan loading jika ada error
+        });
     }
   </script>
 
 </body>
 </html>
- 
