@@ -1,5 +1,4 @@
 
-  <script>
     document.getElementById("pesanForm").addEventListener("submit", function(e) {
       e.preventDefault();
       const formData = new FormData(this);
@@ -18,4 +17,3 @@
         console.error(err);
       });
     });
-  </script>
