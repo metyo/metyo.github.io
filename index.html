@@ -1,251 +1,143 @@
-
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
-  <title>EXC | Kode Software Developer Purwokerto</title>
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
-  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-  <meta name="description" content="Website Purwokerto, Aplikasi (APP) Android Purwokerto, Aplikasi Dekstop Purwokerto, Sistem Informasi Purwokerto. Kami Developer Website (Web), Aplikasi Android, Aplikasi Desktop Di Purwokerto - Banyumas (Jawa Tengah Indonesia)">
-  <meta name="keywords" content=" Website Purwokerto, Aplikasi (APP) Android Purwokerto, Aplikasi Dekstop Purwokerto, Sistem Informasi Purwokerto, Software Purwokerto" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="rating" content="general">
-  <meta name="robots" content="index, follow">
-  <meta name="distribution" content="world" />
-  <meta name="author" content="exckode" />
-  <meta name="generator" content="exckode" />
-  <link rel="SHORTCUT ICON" href="images/1.jpg">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css?v=1.1.1">
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="scroll/css/style.css?v=1.1.1" rel="stylesheet" />
-  <style type="text/css">
-  a:hover{
-    text-decoration:none;
-  }
-</style>
+  <title>Form Pemesanan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #FFA600;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      margin: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      transition: box-shadow 0.2s ease;
+    }
+
+    input:focus, select:focus {
+      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+      outline: none;
+      border-color: #4CAF50;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1em;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light nav-exc">
-    <a class="navbar-brand text-logo" href="#"><font class="text-logoGreen">EXC</font>|Kode</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Home
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="https://memohamad.github.io/exc">Tentang Kami</a>
-            <a class="dropdown-item" href="https://memohamad.github.io/exc/contact.html">Kontak</a>
-            <a class="dropdown-item" href="https://memohamad.github.io/exc/web.html">Web & Bisnis</a>
-            <!-- <div class="dropdown-divider"></div> -->
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Contoh
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="https://memohamad.github.io/accounts/login/">Form Login</a>
-            <a class="dropdown-item" href="https://memohamad.github.io/accounts/signup/">Form Pendaftaran</a>
-            <a class="dropdown-item" href="https://www.youtube.com/watch?v=UOBYpzoYXUE">SEO</a>
-            <!-- <div class="dropdown-divider"></div> -->
-          </div>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Proyek <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://memohamad.github.io/">Harga Sistem</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://meprasetyo.github.io/">CEO EXC|Kode</a>
-        </li>
-      </ul>
-      <a class="form-inline my-2 my-lg-0" href="https://api.whatsapp.com/send?phone=628994190773">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-whatsapp fa-1x"> </i> Chat Kami Di WhatsAPP</button>
-      </a>
-    </div>
-  </nav>
-  <div class="content-exc">
-    <div class="m-row row">
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom" >
-          <div class="margin20-bottom">
-            <img data-src="images/example/9.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-1"></div>
-          <a href="https://memohamad.github.io/accounts" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a> 
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom"  >
-          <div class="margin20-bottom">
-            <img data-src="images/example/10.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-2"></div>
-          <a href="https://memohamad.github.io/perumahan" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom">
-          <div class="margin20-bottom">
-            <img data-src="images/example/11.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-3"></div>
-          <a href="http://purwokerto.azurewebsites.net/best/" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a> 
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom">
-          <div class="margin20-bottom">
-            <img data-src="images/example/12.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-4"></div>
-          <a href="https://memohamad.github.io/restaurant" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a> 
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom">
-          <div class="margin20-bottom">
-            <img data-src="images/example/1.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-5"></div>
-          <a href="https://memohamad.github.io/example/1" target="_blank"  >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a> 
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom">
-          <div class="margin20-bottom">
-            <img data-src="images/example/2.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-6"></div>
-          <a href="https://memohamad.github.io/example/2" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom">
-          <div class="margin20-bottom">
-            <img data-src="images/example/3.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-7"></div>
-          <a href="https://memohamad.github.io/example/3" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a> 
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom">
-          <div class="margin20-bottom">
-            <img data-src="images/example/4.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-8"></div>
-          <a href="https://memohamad.github.io/example/4" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a> 
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom">
-          <div class="margin20-bottom">
-            <img data-src="images/example/5.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-9"></div>
-          <a href="https://memohamad.github.io/example/5" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom">
-          <div class="margin20-bottom">
-            <img data-src="images/example/6.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-10"></div>
-          <a href="https://memohamad.github.io/example/6" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom" >
-          <div class="margin20-bottom">
-            <img data-src="images/example/7.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-11"></div>
-          <a href="https://memohamad.github.io/example/7" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a> 
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 card-padding">
-        <div class="card-container2 margin20-bottom">
-          <div class="margin20-bottom">
-            <img data-src="images/example/8.jpg"  src="images/example/blank.jpg" width="100%" src="" class="lazy ">
-          </div>
-          <div id="this-12"></div>
-          <a href="https://memohamad.github.io/example/8" target="_blank" >
-            <div class="div-card-ex">
-              Klik Lihat
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
+  <div class="form-container">
+    <h2>Form Pemesanan</h2>
+
+    <form id="pesanForm">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required>
+
+      <label for="gender">Jenis Kelamin</label>
+      <select id="gender" name="gender" required>
+        <option value="">Pilih Jenis Kelamin</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select>
+
+      <label for="menu">Menu</label>
+      <select id="menu" name="menu" required>
+        <option value="">Pilih Menu</option>
+        <option value="Pijat 1,5 Jam">Pijat 1,5 Jam @ 100K</option>
+        <option value="Pijat 2 Jam">Pijat 2 Jam @ 150K</option>
+        <option value="Pijat 1,5 Jam + Lulur">Pijat 1,5 Jam + Lulur @ 150K</option>
+        <option value="Pijat 1,5 Jam + Lulur">Pijat 2 Jam + Lulur @ 180K</option>
+      </select>
+
+      <label for="no">Nomor WhatsApp</label>
+      <input type="tel" id="no" name="no" placeholder="812xxxxxxx" required>
+
+      <label for="tanggal">Tanggal Pemesanan</label>
+      <input type="date" id="tanggal" name="tanggal" required>
+
+      <label for="jam">Jam Pemesanan</label>
+      <input type="time" id="jam" name="jam" required>
+
+      <button type="submit">Kirim Pesan</button>
+    </form>
   </div>
-  <div id="footer-page" class="footer-page">
-    <div style="margin: auto;">      
-      <div class="footer-page-img">
-        <img data-src="images/html.PNG" src="images/html.png"  class="lazy img-footer-cls">
-        <img data-src="images/js.PNG" src="images/js.png"  class="lazy img-footer-cls">
-        <img data-src="images/css.PNG" src="images/css.png" class="lazy img-footer-cls">
-        <img data-src="images/bost.PNG" src="images/bost.png" class="lazy img-footer-cls">
-      </div>
-      <br />
-      <div class="footer-page-font">Design by EXC | Kode &#169; 2020</div>
-    </div>
-  </div>
+
+
+  <script>
+    document.getElementById("pesanForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+
+      fetch("https://script.google.com/macros/s/AKfycbyP8cOQhUFrwZGTGrKsQfc0W8onL4JXhAY_23dLm9MD34DAFMV-5QfVDhOdPA_o-DDa/exec", {
+        method: "POST",
+        body: formData
+      })
+      .then(res => res.text())
+      .then(txt => {
+        alert("Pesan berhasil dikirim!");
+        document.getElementById("pesanForm").reset();
+      })
+      .catch(err => {
+        alert("Gagal mengirim pesan.");
+        console.error(err);
+      });
+    });
+  </script>
+
 </body>
-<script src="js/jquery.js" ></script>
-<script src="js/bootstrap.js" ></script>
-<script src="scroll/js/scroll.js"></script>
 </html>
