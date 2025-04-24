@@ -3,7 +3,7 @@
       e.preventDefault();
       const formData = new FormData(this);
 
-      fetch("https://script.google.com/macros/s/AKfycbyP8cOQhUFrwZGTGrKsQfc0W8onL4JXhAY_23dLm9MD34DAFMV-5QfVDhOdPA_o-DDa/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbxHM0K0M5alVbmoSWC2CqEzSLwiElR1URwDdOp0SNYSRlKqiAaqpE7gVHnkrO8dcRKr/exec", {
         method: "POST",
         body: formData
       })
