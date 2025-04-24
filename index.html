@@ -11,7 +11,7 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f5ccc9;
+      background: linear-gradient(135deg, #f5f5f5, #e69ca7, #f31717);
       margin: 0;
       padding: 0;
       display: flex;
@@ -65,12 +65,17 @@
       margin-top: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       transition: background-color 0.3s ease, box-shadow 0.2s ease;
-      float:right;
+      float: right;
     }
 
-    button:hover {
+    button:hover:enabled {
       background-color: #45a049;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    button:disabled {
+      background-color: #999;
+      cursor: not-allowed;
     }
 
     @media (max-width: 480px) {
@@ -102,7 +107,7 @@
         <option value="Pijat 1,5 Jam">Pijat 1,5 Jam @ 100K</option>
         <option value="Pijat 2 Jam">Pijat 2 Jam @ 150K</option>
         <option value="Pijat 1,5 Jam + Lulur">Pijat 1,5 Jam + Lulur @ 150K</option>
-        <option value="Pijat 1,5 Jam + Lulur">Pijat 2 Jam + Lulur @ 180K</option>
+        <option value="Pijat 2 Jam + Lulur">Pijat 2 Jam + Lulur @ 180K</option>
       </select>
 
       <label for="no">Nomor WhatsApp</label>
@@ -114,12 +119,30 @@
       <label for="jam">Jam Pemesanan</label>
       <input type="time" id="jam" name="jam" required>
 
-      <button type="submit">Kirim Pesan</button>
+      <button type="submit" id="submitButton">Kirim Pesan</button>
     </form>
   </div>
 
-<script src="script.js"></script>
+<script>
+  const form = document.getElementById('pesanForm');
+  const submitButton = document.getElementById('submitButton');
 
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Supaya form tidak reload halaman
+
+    // Set tombol loading
+    submitButton.disabled = true;
+    submitButton.textContent = 'Mengirim...';
+
+    // Simulasi kirim data, misal fetch ke server
+    setTimeout(() => {
+      alert('Pesan berhasil dikirim!');
+      form.reset(); // Kosongin form setelah submit
+      submitButton.disabled = false;
+      submitButton.textContent = 'Kirim Pesan'; // Balikin tombol
+    }, 2000); // Simulasi delay 2 detik
+  });
+</script>
 
 </body>
 </html>
