@@ -7,7 +7,7 @@
       submitButton.disabled = true;
       submitButton.innerHTML = 'Mengirim... <div class="loading"></div>';
 
-      fetch("https://script.google.com/macros/s/AKfycbxHM0K0M5alVbmoSWC2CqEzSLwiElR1URwDdOp0SNYSRlKqiAaqpE7gVHnkrO8dcRKr/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbwY6kwV7aCRt55UAvTrO3C3co2mSWRDiuyD5oyxrD5Rh_cgSjHrgWi_r7Uj2x5VQCP0/exec", {
         method: "POST",
         body: formData
       })
